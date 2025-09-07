@@ -2,41 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Import Google Fonts for modern typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Minimalist Design System for Manifesto Page */
 
 @layer base {
   :root {
+    /* Clean, minimal color palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --foreground: 0 0% 9%;
+    
+    /* Subtle grays for depth */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    /* Minimal accent for CTA */
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Clean borders and inputs */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 20%;
+    
+    /* Typography scale */
+    --text-hero: 3.5rem;
+    --text-large: 1.25rem;
+    --text-body: 1.125rem;
+    
+    /* Spacing scale for manifesto */
+    --space-section: 5rem;
+    --space-paragraph: 2rem;
+    --space-line: 1.75;
+    
+    /* Smooth transitions */
+    --transition: all 0.2s ease;
+    
+    --radius: 0.375rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +103,35 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+    line-height: var(--space-line);
+  }
+  
+  /* Typography hierarchy for manifesto */
+  .text-hero {
+    font-size: var(--text-hero);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  
+  .text-manifesto {
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: var(--space-line);
+    color: hsl(var(--foreground));
+  }
+  
+  .text-large {
+    font-size: var(--text-large);
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  
+  /* Responsive typography */
+  @media (max-width: 768px) {
+    .text-hero {
+      font-size: 2.5rem;
+    }
   }
 }

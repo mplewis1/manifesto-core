@@ -3,35 +3,35 @@ import { Button } from "@/components/ui/button";
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
-      <div className="container max-w-4xl mx-auto px-6 py-16 md:py-24">
+      <div className="container max-w-3xl mx-auto px-6 py-20 md:py-32">
         {/* Hero Section */}
         <section className="text-center mb-section">
-          <h1 className="text-hero text-foreground mb-8 font-inter">
-            We build the future, one line at a time
+          <h1 className="text-hero mb-6 font-inter">
+            We build infrastructure for the next generation of AI
           </h1>
         </section>
 
         {/* Manifesto Content */}
-        <section className="max-w-3xl mx-auto space-y-paragraph">
-          <p className="text-manifesto text-foreground leading-relaxed">
-            Technology isn't just about code—it's about possibility. We believe in creating 
-            solutions that don't just solve today's problems, but anticipate tomorrow's 
-            opportunities. Every product we build, every line we write, every decision we make 
-            is guided by one principle: meaningful innovation that serves real human needs.
+        <section className="max-w-2xl mx-auto space-y-paragraph">
+          <p className="text-manifesto leading-relaxed">
+            The future of artificial intelligence depends on robust, scalable infrastructure 
+            that can handle the complexity of tomorrow's models. We build the foundation 
+            that enables researchers, companies, and innovators to push the boundaries of 
+            what's possible without worrying about the underlying systems.
           </p>
 
-          <p className="text-manifesto text-foreground leading-relaxed">
-            In a world saturated with complexity, we choose simplicity. In a market obsessed 
-            with features, we focus on purpose. We don't build software just because we can—we 
-            build it because we must. Because somewhere, someone has a problem that deserves 
-            an elegant solution.
+          <p className="text-manifesto leading-relaxed">
+            Our approach is simple: create infrastructure that scales seamlessly, performs 
+            reliably, and remains accessible to teams of all sizes. Whether you're training 
+            the next breakthrough model or deploying production AI at scale, our platform 
+            provides the computational backbone you need.
           </p>
 
-          <p className="text-manifesto text-foreground leading-relaxed">
-            We are craftspeople in the digital age. We care about performance, usability, and 
-            the small details that make the difference between good and exceptional. We believe 
-            that the best technology disappears into the background, empowering people to do 
-            what they do best: create, connect, and grow.
+          <p className="text-manifesto leading-relaxed">
+            We believe that the most transformative AI breakthroughs happen when brilliant 
+            minds can focus entirely on innovation, not infrastructure management. That's 
+            why we've built a platform that just works—reliable, fast, and designed to 
+            grow with your ambitions.
           </p>
         </section>
 
@@ -40,11 +40,11 @@ const Index = () => {
           <Button variant="manifesto" size="lg" asChild>
             <a 
               href="#" 
-              className="inline-flex items-center justify-center"
+              className="inline-flex items-center justify-center px-8 py-3"
               target="_blank" 
               rel="noopener noreferrer"
             >
-              Join Our Mission
+              Get Started
             </a>
           </Button>
         </section>
